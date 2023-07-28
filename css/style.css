@@ -1,0 +1,402 @@
+/* import google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ======================= GENERAl STYLING ======================= */
+/* --- variables --- */
+:root {
+  --img-link-1: url("https://images.unsplash.com/photo-1643189446178-dc8dbc187dc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  --img-link-2: url("https://images.unsplash.com/photo-1643144890122-a5b454d64681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  --img-link-3: url("https://images.unsplash.com/photo-1642866737560-de49d329a3f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  --img-link-4: url("https://images.unsplash.com/photo-1642420062605-a68fcf3002bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=867&q=80");
+  --img-link-5: url("https://images.unsplash.com/photo-1634482899782-a103fabb58de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  --blue-color: #5890d0;
+  --green-color: #4caf50;
+  --orange-color: #ff5722;
+  --gray-color: #9e9e9e;
+  --blue-gradient: linear-gradient(
+    155deg,
+    #ddd 0%,
+    var(--blue-color) 50%,
+    #333 100%,
+    #ddd 100%
+  );
+  --green-gradient: linear-gradient(
+    155deg,
+    #ddd 0%,
+    var(--green-color) 50%,
+    #333 100%,
+    #ddd 100%
+  );
+  --orange-gradient: linear-gradient(
+    155deg,
+    #ddd 0%,
+    var(--orange-color) 50%,
+    #333 100%,
+    #ddd 100%
+  );
+  --gray-gradient: linear-gradient(
+    155deg,
+    #ddd 0%,
+    var(--gray-color) 50%,
+    #333 100%,
+    #ddd 100%
+  );
+  --opactiy-black-color: rgba(0, 0, 0, 0.5);
+  --opactiy-white-color: rgba(255, 255, 255, 0.5);
+  --transition-value: all 0.3s ease-in;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- general classes --- */
+.blue-gradient {
+  background-image: var(--blue-gradient);
+}
+
+.green-gradient {
+  background-image: var(--green-gradient);
+}
+
+.orange-gradient {
+  background-image: var(--orange-gradient);
+}
+
+.gray-gradient {
+  background-image: var(--gray-gradient);
+}
+
+.blue-color {
+  background-color: var(--blue-color);
+}
+
+.green-color {
+  background-color: var(--green-color);
+}
+
+.orange-color {
+  background-color: var(--orange-color);
+}
+
+.gray-color {
+  background-color: var(--gray-color);
+}
+
+/* I use a .app class insted of body because the overflow: hidden in body don't work in mobile */
+.app {
+  /* body */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* ======================= CARDS DIV ======================= */
+.app .cards {
+  display: flex;
+  gap: 20px;
+  width: 80vw;
+  height: 80vh;
+  padding: 50px;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.7), 0 4px 6px -4px rgb(0 0 0 / 0.7);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .app .cards {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .app .cards {
+    flex-direction: column;
+    gap: 15px;
+    width: 90vw;
+    height: 90vh;
+    padding: 20px;
+  }
+}
+
+.app .cards .card {
+  flex: 0.5;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  transition: var(--transition-value);
+  cursor: pointer;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .app .cards .card {
+    flex: 0.75;
+  }
+}
+
+.app .cards .card.active {
+  flex: 5;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.6),
+    0 8px 10px -6px rgb(0 0 0 / 0.6);
+}
+
+.app .cards .card:first-child {
+  background-image: var(--img-link-1);
+}
+
+.app .cards .card:nth-child(2) {
+  background-image: var(--img-link-2);
+}
+
+.app .cards .card:nth-child(3) {
+  background-image: var(--img-link-3);
+}
+
+.app .cards .card:nth-child(4) {
+  background-image: var(--img-link-4);
+}
+
+.app .cards .card:nth-child(5) {
+  background-image: var(--img-link-5);
+}
+
+.app .cards .card::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f06e";
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: var(--blue-color);
+  background-color: var(--opactiy-black-color);
+  opacity: 0;
+  border-radius: 30px;
+  transition: var(--transition-value);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .app .cards .card::before {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .app .cards .card::before {
+    font-size: 20px;
+  }
+}
+
+.app .cards .card:hover::before {
+  opacity: 1;
+}
+
+.app .cards .card.active:hover::before {
+  opacity: 0;
+}
+
+.app .cards .card h3 {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #fff;
+  font-size: 24px;
+  opacity: 0;
+  transition: var(--transition-value);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .app .cards .card h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .app .cards .card h3 {
+    font-size: 18px;
+    left: 15px;
+    bottom: 15px;
+  }
+}
+
+.app .cards .card.active h3 {
+  opacity: 1;
+}
+
+.app .cards .background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: 110%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: var(--transition-value);
+}
+
+@media (max-width: 767px) {
+  .app .cards .background {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.app .cards .card.active:first-child ~ .background {
+  background-image: var(--img-link-1);
+}
+
+.app .cards .card.active:nth-child(2) ~ .background {
+  background-image: var(--img-link-2);
+}
+
+.app .cards .card.active:nth-child(3) ~ .background {
+  background-image: var(--img-link-3);
+}
+
+.app .cards .card.active:nth-child(4) ~ .background {
+  background-image: var(--img-link-4);
+}
+
+.app .cards .card.active:nth-child(5) ~ .background {
+  background-image: var(--img-link-5);
+}
+
+.app .cards .background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--opactiy-white-color);
+  border-radius: 20px;
+}
+
+/* ======================= COLORS DIV ======================= */
+.colors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px 0 0 20px;
+  transform: translateY(-50%) translateX(70px);
+  transition: var(--transition-value);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .colors {
+    padding: 15px;
+    transform: translateY(-50%) translateX(50px);
+  }
+}
+
+@media (max-width: 767px) {
+  .colors {
+    padding: 10px;
+    transform: translateY(-50%) translateX(40px);
+  }
+}
+
+.colors.active {
+  transform: translateY(-50%) translateX(0);
+}
+
+.colors div {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .colors div {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .colors div {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.colors div.active {
+  border: solid 1px var(--opactiy-white-color);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.colors div:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+
+@media (max-width: 767px) {
+  .colors div:hover {
+    transform: scale(1.15);
+  }
+}
+
+.colors .arrow {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  padding: 4px;
+  color: #333;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: var(--transition-value);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .colors .arrow {
+    font-size: 14px;
+    padding: 3px;
+  }
+}
+
+@media (max-width: 767px) {
+  .colors .arrow {
+    font-size: 12px;
+    padding: 2px;
+    left: -8px;
+  }
+}
+
+.colors div.blue-color.active ~ .arrow {
+  background-color: var(--blue-color);
+}
+
+.colors div.orange-color.active ~ .arrow {
+  background-color: var(--orange-color);
+}
+
+.colors div.green-color.active ~ .arrow {
+  background-color: var(--green-color);
+}
+
+.colors div.gray-color.active ~ .arrow {
+  background-color: var(--gray-color);
+}
