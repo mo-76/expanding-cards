@@ -3,6 +3,10 @@
 
 Expanding Cards is a simple and interactive web application that showcases a collection of expandable cards. When clicked, each card expands to reveal more content while the other cards collapse, providing an engaging user experience.
 
+
+## Demo
+You can try out the live demo of the Counter App [here](https://mo-76.github.io/expanding-cards/).
+
 ## Features
 - Smooth and animated transitions for an interactive feel.
 - Customizable content: Easily add your images, text, or any HTML content to the cards.
