@@ -21,15 +21,10 @@ To run the project locally, all you need is a web browser and a text editor. Clo
 1. Click on any card to expand it and reveal additional content.
 2. As you click on different cards, the previously expanded cards will collapse automatically.
 3. Experiment with adding your images and content to the cards by modifying the HTML and CSS files.
-4. Customize background color: Click on the color boxes on the right sidebar to choose a background color for the cards.
-
-## Contributing
-We welcome contributions from the community to improve the project. If you find any issues or have ideas for enhancements, feel free to open an issue or submit a pull request following our contribution guidelines.
+4. Customize background color: Click on the color boxes on the right sidebar 
 
 ## Contact
 For any questions or feedback, you can reach out to the project maintainer through email or social media. Contact information is available on our GitHub profile.
-
-**Live Demo:** [Demo Link](https://mo-76.github.io/expanding-cards/)
 
 ## Tech Stack
 - HTML
