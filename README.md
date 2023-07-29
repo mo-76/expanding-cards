@@ -1,4 +1,4 @@
-# [expanding-cards](https://github.com/mo-76/expanding-cards/assets/69032001/de7aa02e-c3ce-4b26-ac89-8b1a5160c29d)
+# ![expanding-cards](https://github.com/mo-76/expanding-cards/assets/69032001/de7aa02e-c3ce-4b26-ac89-8b1a5160c29d)
 
 Expanding Cards is a simple and interactive web application that showcases a collection of expandable cards. When clicked, each card expands to reveal more content while the other cards collapse, providing an engaging user experience.
 
