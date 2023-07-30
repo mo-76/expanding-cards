@@ -9,7 +9,6 @@ You can try out the live demo of the Counter App [here](https://mo-76.github.io/
 
 ## Features
 - Smooth and animated transitions for an interactive feel.
-- Customizable content: Easily add your images, text, or any HTML content to the cards.
 - Responsive design: The cards adjust to different screen sizes, ensuring a seamless experience on mobile devices and desktops.
 - Choose background color: Users can select their preferred background color for the cards from a set of predefined color options.
 - Save preferences: The chosen background color is saved in the user's local storage, so it persists across visits.
